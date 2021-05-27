@@ -1,0 +1,89 @@
+.snackbar{
+    right: 0;
+    display: block;
+    border-radius: 4px;
+    align-content: center;
+    padding: 1.5em;
+    animation-duration: 0.5s;
+    animation-name: slidein;
+    margin-bottom: 1.5em;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.snackbar-info{
+    background-color: #3D3D3D;
+}
+.snackbar-error{
+    background-color: #862525;
+}
+.snackbar-success{
+    background-color: #51A351;
+}
+.snackbar-warning{
+    background-color: #F89406;
+}
+.snackbar-text{
+    color: white;
+    text-align: left;
+    line-height: 1.3rem;
+    display: inline;
+    font-size: 1.2rem;
+    font-style: normal;
+    overflow-x: hidden;
+}
+  
+.snackbar-text-wrapper {
+    width: calc(100% - 2rem);
+}
+  
+#kc-snackbar-wrapper {
+    margin: 1.5rem;
+    float: right;
+    width: 23%;
+    min-width: 450px;
+    z-index: 1;
+}
+
+.snackbar-close-button{
+    width: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    margin-top: -1rem;
+    float: right;
+    border: none;
+    color: rgba(255,255,255,0.75);
+}
+.snackbar-close-button:hover {
+    color: #FFFFFF;
+}
+
+.snackbar-close-button:focus{
+  outline: none;
+}
+
+.snackbar-slideout{
+    animation: slideout 0.5s forwards;
+}
+  
+  @keyframes slidein{
+    from {
+      opacity: 0;
+    }
+  
+    to{
+      opacity: 100%;
+    }
+  }
+  
+  @keyframes slideout{
+  
+    0% {
+      opacity: 100%;
+    }
+  
+    100%{
+      opacity: 0%;
+    }
+}

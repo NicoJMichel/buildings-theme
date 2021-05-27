@@ -1,0 +1,349 @@
+:root {
+  /* ECY/Main/Primary 500 */
+  --color-primary-500: #f50057;
+  /* ECY/Messages/Error-500 */
+  --color-error-500: #7b2d29;
+}
+
+@font-face {
+  font-family: 'energycity';
+  src: url("../fonts/1462031/52926f65-1323-4d02-be2d-934b4de477fb.eot?#iefix");
+  src: url("../fonts/1462031/52926f65-1323-4d02-be2d-934b4de477fb.eot?#iefix") format("eot"), url("../fonts/1462031/54b9363e-aa6c-48e2-85c7-80683d83e617.woff2") format("woff2"), url("../fonts/1462031/c092dbc5-48eb-4b39-a898-4d4150c06459.woff") format("woff"), url("../fonts/1462031/1009b9de-005c-4462-9495-767c25320e42.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'energycity';
+  src: url("../fonts/1463664/42f8f200-6ff8-4b67-bc96-8d674f4b3275.eot?#iefix");
+  src: url("../fonts/1463664/42f8f200-6ff8-4b67-bc96-8d674f4b3275.eot?#iefix") format("eot"), url("../fonts/1463664/0bfd2aae-9a10-46f3-924e-402e9ad13428.woff2") format("woff2"), url("../fonts/1463664/215149dc-634c-4908-971e-9f03beeede36.woff") format("woff"), url("../fonts/1463664/1cef6dfa-3f90-464c-a4aa-902709a78cea.ttf") format("truetype");
+  font-weight: bold;
+}
+
+* {
+  font-family: "energycity", sans-serif;
+}
+
+body {
+	background: #979797;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+	height: 100%; 
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#rememberMe{
+float: left;
+width: 1.2em !important;
+height: 1.2em !important;
+margin-right: 0.5em;
+}
+
+input{
+  color: black;
+}
+
+input[type=text],
+input[type=password] {
+  outline: none;
+  font-size: 1.2em;
+  width: 100%;
+  padding: 0.75em;
+  background-color: #f9f9f9;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+input[type=text]::placeholder,
+input[type=password]::placeholder {
+  color: #c9c9c9;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+  box-shadow: 0px 0px 5px var(--color-primary-500);
+  border: 1px solid var(--color-primary-500);
+}
+
+#eneBgImage {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+
+#divEneLoginContainer {
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  width: 25%;
+  min-width: 400px;
+}
+
+#divEneLogin {
+	margin: 0 auto;
+	background: #ffffff;
+	border-top: 1px solid #CDCDCD;
+  border-bottom: 1px solid #CDCDCD;
+  padding: 2em;
+}
+
+#divEneLoginHeader {
+	margin: auto auto;
+	background: #ffffff;
+	border-radius: 4px 4px 0px 0px;
+  align-items: center;
+}
+
+#divEneLoginfooter {
+	margin: 0 auto;
+	background: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+  padding: 2em;
+}
+
+#btnEneLogin {
+	color: white;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #0588C7 2.58%, #170E68 100%);
+  width: 100%;
+  padding: .6em;
+	border-radius: 6px;	
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  font-size: 1.2em;
+	font-weight: 600;
+	text-align: center;
+  border: none;
+  cursor: pointer; 
+}
+
+#password {
+	margin-bottom: .2em;
+}
+
+.checkbox {
+  margin-left: .5em;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.checkbox > input {
+  height: 1em;
+  width: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 1px solid #CDCDCD;
+  border-radius: none;
+  outline: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  margin-right: .5em;
+}
+
+.checkbox > input:checked + span::before {
+  content: '\2714';
+  font-size: .75em;
+  display: block;
+  color: #CDCDCD;
+  position: absolute;
+  top: .2em;
+  left: .25em;
+}
+
+#divEneRememberMe {
+  margin-top: .5em;
+}
+
+#divEneForgotPassword {
+	margin-bottom: 20px;
+}
+
+#divLanguages {
+	padding-top: 15px;
+}
+
+#divLanguages a {
+	text-decoration: none;
+	padding: 5px;
+}
+
+#divDatenschutzHinweis {
+  text-align: left;
+}
+
+.caps-lock{
+  font-weight: bold;
+  color: #FF9900;
+  line-height: 1.2rem;
+  float: left;
+  text-align: left;
+  font-size: 0.8em;
+  margin-top: 0;
+  visibility: hidden;
+}
+
+.inputFieldName{
+  text-align: left;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* 
+Vertically and horizontally center the login mask
+*/
+#kc-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+#kc-form-buttons {
+  padding-bottom: 3.5em;
+}
+
+#logo {
+  width: 80%;
+  margin: 10% 10% 10% 10%;
+}
+
+.link{
+  color: #F90159 !important;
+  text-decoration: underline !important;
+}
+
+.forgot-password{
+  float: right;
+}
+/*
+Use the following styling adapted from @enersis-ui
+*/
+.modal-dialog {
+  overflow: hidden;
+  padding: 1.25em;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px 0 rgba(0,0,0,.2);
+  width: 600px;
+  max-width: 600px;
+  margin: 5% auto 0;
+}
+
+.modal-content {
+  border: none;
+  background-color: transparent;
+}
+
+.modal-header {
+  font-weight: 700;
+  padding: .3rem 0;
+  margin-bottom: .5rem;
+  border-bottom: none;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+h2.title {
+  margin-bottom: 1.5rem;
+}
+
+.h3, h3 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.h4, h4 {
+  font-weight: bold;
+  padding: .3rem 0;
+  margin-bottom: .5rem;
+}
+
+.modal-body {
+  overflow: auto;
+  max-height: 680px;
+  padding: 0 0.5em 0 0;
+  font-size: 0.846rem;
+}
+
+.close {
+  padding: 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+/* Watermark image */
+#watermark {
+  position: absolute;
+  top: -2%;
+  right: -20%;
+  width: 70%;
+  opacity: .03;
+  z-index: -1;
+}
+
+.reset-password-abort {
+  margin: -2rem -2rem 2rem -2rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid #CDCDCD;
+  text-transform: uppercase;
+}
+
+.reset-password-abort a {
+  color: var(--color-primary-500);
+  text-decoration: none;
+  display: inline-flex;
+}
+.reset-password-abort a h2 {
+  font-weight: 600;
+  margin-left: 1.5rem;
+}
+
+.reset-password-description {
+  margin-bottom: 2rem;
+}
+
+.passwd-validation-box {
+  color: #5A6D79;
+  width: 100%;
+  padding: 0 .3rem;
+  background-color: #f9f9f9;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.passwd-validation-box .passwd-requirement {
+  display: flex;
+}
+
+.passwd-validation-box .passwd-requirement .icon {
+  margin-right: .3rem;
+  width: 1rem;
+  height: 1rem;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.passwd-validation-box .passwd-requirement .icon img {
+  display: none;
+}
