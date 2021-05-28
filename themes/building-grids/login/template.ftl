@@ -87,6 +87,7 @@
             <div id="divEneLoginfooter">
                 <div id="divDatenschutzHinweis" class="datenschutz">
                     <span style='color:grey'>${msg("datenschutzhinweis")} ${msg("dataPrivacyStatement")}</span>
+                    <a href="${url.loginResetCredentialsUrl}" class="link forgot-password">${msg("doForgotPassword")}</a>
                 </div>
             </div>
         </div>
