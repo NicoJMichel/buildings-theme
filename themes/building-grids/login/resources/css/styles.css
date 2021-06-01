@@ -87,7 +87,8 @@ input[type=password]:focus {
 
 #divEneLogin {
 	margin: 0 auto;
-	background: #ffffff;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.81) 61.98%, rgba(255, 255, 255, 0.5) 100%);
+
 	border-top: 1px solid #CDCDCD;
   border-bottom: 1px solid #CDCDCD;
   padding: 2em;
@@ -95,14 +96,16 @@ input[type=password]:focus {
 
 #divEneLoginHeader {
 	margin: auto auto;
-	background: #ffffff;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.97) 32.81%, rgba(255, 255, 255, 0.81) 61.98%);
+
 	border-radius: 4px 4px 0px 0px;
   align-items: center;
 }
 
 #divEneLoginfooter {
 	margin: 0 auto;
-	background: #ffffff;
+  background: rgba(255, 255, 255, 0.5) 100%;
+
   border-radius: 0px 0px 4px 4px;
   padding: 2em;
 }
@@ -154,7 +157,7 @@ input[type=password]:focus {
   content: '\2714';
   font-size: .75em;
   display: block;
-  color: #CDCDCD;
+  color: #00A6DF;
   position: absolute;
   top: .2em;
   left: .25em;
@@ -198,6 +201,7 @@ input[type=password]:focus {
   margin-top: 0;
 }
 
+
 /* 
 Vertically and horizontally center the login mask
 */
@@ -226,6 +230,7 @@ Vertically and horizontally center the login mask
 }
 
 .forgot-password{
+  position: relative;
   float: right;
 }
 /*
