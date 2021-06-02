@@ -51,6 +51,9 @@
         }
     }
     </script>
+
+    
+
 </head>
 
 <body class="${properties.kcBodyClass!}">
@@ -60,6 +63,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   
+  <script>
+$(document).ready(function() {
+    $('#datenschutzLink').click(function () {
+        $.get("https://language-dev.enersis.services/v1/translations/energycity/de-ch", function( data ) {
+        $('#myDatenschutzContent').html(data.CLIENTS.REGENSDORF_PUBLIC.FOOTER.DATENSCHUTZ_CONTENT);
+        }, "json" );
+    });
+});
+</script>
+
+<#include "modal_datenschutz.ftl">
   
   <div class="${properties.kcLoginClass!}">
     <div class="${properties.kcFormCardClass!} <#if displayWide>${properties.kcFormCardAccountClass!}</#if>">
@@ -96,53 +110,8 @@
     </div>
   </div>
 
-  <script>
-$(document).ready(function() {
-    $('#datenschutzLink').click(function () {
-        $.get("https://language-dev.enersis.services/v1/translations/energycity/de-ch", function( data ) {
-        $('#myDatenschutzContent').html(data.CLIENTS.REGENSDORF_PUBLIC.FOOTER.DATENSCHUTZ_CONTENT);
-        }, "json" );
-    });
-});
-</script>
+  
 
-<#include "modal_datenschutz.ftl">
-
-  <div class="${properties.kcLoginClass!}">
-    <div class="${properties.kcFormCardClass!} <#if displayWide>${properties.kcFormCardAccountClass!}</#if>">
-    <div id="kc-snackbar-wrapper" class="${properties.kcInfoAreaWrapperClass!}">
-        <#nested "snackbar">
-    </div>
-      <div id="kc-content">
-        <div id="divEneLoginContainer">
-            <div id="divEneLoginHeader">
-                <#assign logourl = url.resourcesPath + "/img/GRIDS standard Suite.svg">
-                 <img border="0" src="${logourl}" width="180" id="logo">
-            </div>
-            <div id="divEneLogin">	
-                <div id="kc-form" class="${properties.kcFormAreaClass!}">
-                    <div id="kc-form-wrapper" class="${properties.kcFormAreaWrapperClass!}">
-                        <#nested "form">
-                    </div>
-                </div>
-                <#if displayInfo>
-                    <div id="kc-info" class="${properties.kcInfoAreaClass!}">
-                        <div id="kc-info-wrapper" class="${properties.kcInfoAreaWrapperClass!}">
-                            <#nested "info">
-                        </div>
-                    </div>
-                </#if>    
-            </div>
-            <div id="divEneLoginfooter">
-              <div id="divDatenschutzHinweis" class="datenschutz">
-                <span style='color:grey'>${msg("datenschutzhinweis")} <a class="link" id="datenschutzLink" href="modal_datenschutz.ftl" data-target="#myModal" data-toggle="modal">${msg("dataPrivacyStatement")}</a>.</span>
-              </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    </div>
-  </div>
 </body>
 </html>
 </#macro>
