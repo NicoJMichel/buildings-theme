@@ -87,18 +87,18 @@ $(document).ready(function() {
                  <img border="0" src="${logourl}" width="180" id="logo">
             </div>
             <div id="divEneLogin">	
-                <div id="kc-form" class="${properties.kcFormAreaClass!}">
-                    <div id="kc-form-wrapper" class="${properties.kcFormAreaWrapperClass!}">
-                        <#nested "form">
-                    </div>
-                </div>
-                <#if displayInfo>
+            <#if displayInfo>
                     <div id="kc-info" class="${properties.kcInfoAreaClass!}">
                         <div id="kc-info-wrapper" class="${properties.kcInfoAreaWrapperClass!}">
                             <#nested "info">
                         </div>
                     </div>
                 </#if>    
+                <div id="kc-form" class="${properties.kcFormAreaClass!}">
+                    <div id="kc-form-wrapper" class="${properties.kcFormAreaWrapperClass!}">
+                        <#nested "form">
+                    </div>
+                </div>
             </div>
             <div id="divEneLoginfooter">
                 <div id="divDatenschutzHinweis" class="datenschutz">

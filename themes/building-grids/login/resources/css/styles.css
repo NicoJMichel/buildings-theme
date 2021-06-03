@@ -246,15 +246,35 @@ input[type="password"]:focus {
 
 #username,
 #password {
-  background-color: white;
-  border-color: #00a6df;
+  background-color: white !important;
+  /* border-color: #00a6df; */
+  /* border-color: #CED8DC; */
+}
+
+#input-wrapper:focus-within #usernameLabelPW{
+    color: red;
 }
 
 #usernamePW {
   background-color: white;
-  border-color: #00a6df;
+  /* border-color: #00a6df; */
+  border-color: #CED8DC;
   margin-bottom: 3.5em;
 }
+
+#usernameLabelPW {
+  display: inline-block;
+  position: relative;
+  left: 0.75em;
+  top: 0.75em;
+  z-index: 1;
+  text-align: left;
+  margin-bottom: 0;
+  margin-top: 0;
+  background-color: #ffffff;
+  color: #00a6df;
+}
+
 
 .backToLogin {
   color: #ce0563;
