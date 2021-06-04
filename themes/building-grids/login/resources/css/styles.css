@@ -193,7 +193,10 @@ input[type="password"]:focus {
   content: "\2714";
   font-size: 1em;
   display: block;
-  color: #00a6df;
+  color: #ffffff;
+  background-color: #00a6df;
+  width: 22px;
+  height: 22px;
   position: absolute;
   top: 0.2em;
   left: 0.25em;
@@ -241,7 +244,7 @@ input[type="password"]:focus {
   margin-bottom: 0;
   margin-top: 0;
   background-color: #ffffff;
-  color: #00a6df;
+  color: #5f7d8b;
 }
 
 #username,
@@ -251,14 +254,18 @@ input[type="password"]:focus {
   /* border-color: #CED8DC; */
 }
 
-#input-wrapper:focus-within #usernameLabelPW{
-    color: red;
+#input-wrapper:focus-within #usernameLabelPW {
+  color: #00a6df;
+}
+
+.inputField:focus-within .inputFieldName {
+  color: #00a6df;
 }
 
 #usernamePW {
   background-color: white;
   /* border-color: #00a6df; */
-  border-color: #CED8DC;
+  border-color: #ced8dc;
   margin-bottom: 3.5em;
 }
 
@@ -272,22 +279,26 @@ input[type="password"]:focus {
   margin-bottom: 0;
   margin-top: 0;
   background-color: #ffffff;
-  color: #00a6df;
+  color: #5f7d8b;
 }
 
-
-.backToLogin {
-  color: #ce0563;
+#backToLogin {
+  color: #ce0563 !important;
   text-transform: uppercase;
   background: white;
   width: 100%;
   padding: 0.6em;
   border-radius: 4px;
-  border-color: #ce0563;
+  border: 4px #ce0563;
   font-size: 1.2em;
   font-weight: 600;
   text-align: center;
   cursor: pointer;
+}
+
+#back {
+  color: #ce0563;
+  border: 4px #ce0563;
 }
 /* 
 Vertically and horizontally center the login mask
@@ -320,6 +331,7 @@ Vertically and horizontally center the login mask
   position: relative;
   float: right;
 }
+
 /*
 Use the following styling adapted from @enersis-ui
 */

@@ -29,9 +29,10 @@
                     <input class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("doSubmit")}"/>
                 </div>
                 <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
-                    <div class="${properties.kcFormOptionsWrapperClass!}">
-                        <!--<span class="backToLogin"><a href="${url.loginUrl}">${kcSanitize(msg("backToLogin"))?no_esc}</a></span> -->
-                        <input class="backToLogin" type="button" value="${kcSanitize(msg("backToLogin"))?no_esc}" "${url.loginUrl}"/>
+                    <div  id="backToLogin" class="${properties.kcFormOptionsWrapperClass!}">
+                        <a href="${url.loginUrl}">
+                        <span id="back">${kcSanitize(msg("backToLogin"))?no_esc}</span>
+                        </a>
                     </div>
                 </div>
             </div>
