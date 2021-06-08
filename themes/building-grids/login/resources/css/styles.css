@@ -269,6 +269,13 @@ input[type="password"]:focus {
   margin-bottom: 3.5em;
 }
 
+#usernamePW:empty #kc-form-buttons {
+  pointer-events: none;
+  cursor: not-allowed;
+  background-color: red;
+  color: red;
+}
+
 #usernameLabelPW {
   display: inline-block;
   position: relative;
@@ -285,7 +292,7 @@ input[type="password"]:focus {
 #backToLogin {
   color: #ce0563 !important;
   text-transform: uppercase;
-  background: white;
+  
   width: 100%;
   padding: 0.6em;
   border-radius: 4px;
@@ -298,7 +305,18 @@ input[type="password"]:focus {
 
 #back {
   color: #ce0563;
-  border: 4px #ce0563;
+  text-transform: uppercase;
+  background: white;
+  width: 100%;
+  padding: 0.6em;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  font-size: 1.2em;
+  font-weight: 600;
+  text-align: center;
+  border: 1px;
+  border-color: #ce0563;
+  border-style: solid;
+  cursor: pointer;
 }
 /* 
 Vertically and horizontally center the login mask
@@ -329,7 +347,7 @@ Vertically and horizontally center the login mask
 
 .forgot-password {
   position: relative;
-  float: right;
+  float: left;
 }
 
 /*
