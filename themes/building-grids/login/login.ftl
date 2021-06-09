@@ -30,13 +30,13 @@
                 <span>${msg("password")}</span>
               </div>
               <input tabindex="2" id="password" class="${properties.kcInputClass!}" name="password" type="password" autocomplete="off" placeholder="•••••••••••" />
-              <#assign warning_icon = url.resourcesPath + "/img/warning_small.svg">
-              <p class="caps-lock" id="caps-lock-warning">${msg("capsLock")}<img src="${warning_icon}"></p>
             </div>
             <div class="inputField">
             <#if realm.resetPasswordAllowed>
-                  <a href="${url.loginResetCredentialsUrl}" class="link forgot-password">${msg("doForgotPassword")}</a>
+                  <a href="${url.loginResetCredentialsUrl}" class="link" id="forgot-password">${msg("doForgotPassword")}</a>
                 </#if>
+                <#assign warning_icon = url.resourcesPath + "/img/warning_small.svg">
+              <p class="caps-lock" id="caps-lock-warning">${msg("capsLock")}<img src="${warning_icon}"></p>
               <input id="btnEneLogin" tabindex="4" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
             </div>
             <div id="kc-form-options">
