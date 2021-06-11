@@ -10,9 +10,14 @@
                 </button>
                 <div class="snackbar-text-wrapper">
                 <span class="snackbar-text">${message.summary}</span>
+                <span class="snackbar-text">${message}</span>
                 </div>
               </div>
   <#elseif section = "form">
+  <#if message?has_content && message.summary == msg("emailSentMessage")>
+  <#import "password-resetted.ftl" as pwResetted>
+    <@pwResetted.passwordResettedContent />
+    <#else>
     <div id="kc-form" <#if realm.password && social.providers??>class="${properties.kcContentWrapperClass!}"</#if>>
       <div id="kc-form-wrapper" <#if realm.password && social.providers??>class="${properties.kcFormSocialAccountContentClass!} ${properties.kcFormSocialAccountClass!}"</#if>>
         <#if realm.password>
@@ -68,6 +73,7 @@
         </div>
       </#if>
     </div>
+    </#if>
   <#elseif section = "info" >
     <#if realm.password && realm.registrationAllowed && !usernameEditDisabled??>
       <!--
