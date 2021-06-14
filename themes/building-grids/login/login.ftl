@@ -10,7 +10,6 @@
                 </button>
                 <div class="snackbar-text-wrapper">
                 <span class="snackbar-text">${message.summary}</span>
-                <span class="snackbar-text">${message}</span>
                 </div>
               </div>
   <#elseif section = "form">

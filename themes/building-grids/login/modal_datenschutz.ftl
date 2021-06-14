@@ -1,8 +1,9 @@
 <div id="myModal" class="modal text-left" role="dialog">
   <div class="modal-dialog" role="document">
-    <img id="watermark" src="${url.resourcesPath}/img/datenschutz.svg"/>
+    <!-- <img id="watermark" src="${url.resourcesPath}/img/datenschutz.svg"/> -->
     <div class="modal-content">
       <div class="modal-header">
+      <img id="watermark" src="${url.resourcesPath}/img/datenschutz.svg"/>
         <h4 class="modal-title">
           Datenschutzinformationen
         </h4>
