@@ -1,8 +1,14 @@
+<#import "password-resetted.ftl" as pwResetted>
 <#import "template.ftl" as layout>
 
 <@layout.registrationLayout displayInfo=social.displayInfo displayWide=(realm.password && social.providers??); section>
   <#if section = "header">
-    ${msg("doLogIn")}
+  <#if message?has_content && message.summary == msg("emailSentMessage")>
+  <@pwResetted.passwordResettedHeader />
+  <#else>
+    <#assign logourl = url.resourcesPath + "/img/GRIDS standard Suite.svg">
+      <img border="0" src="${logourl}" width="180" id="logo">
+    </#if>
   <#elseif section = "snackbar" && message?has_content>
               <div id="snackbar" class="snackbar snackbar-${message.type}" >
                 <button class="snackbar-close-button" onclick="removeIt()">
@@ -14,7 +20,6 @@
               </div>
   <#elseif section = "form">
   <#if message?has_content && message.summary == msg("emailSentMessage")>
-  <#import "password-resetted.ftl" as pwResetted>
     <@pwResetted.passwordResettedContent />
     <#else>
     <div id="kc-form" <#if realm.password && social.providers??>class="${properties.kcContentWrapperClass!}"</#if>>

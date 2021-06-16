@@ -504,3 +504,29 @@ p {
 .passwd-validation-box .passwd-requirement .icon img {
   display: none;
 }
+
+
+/* Password resetted */
+
+.pwReset-header {
+  background-color: #F2F4F6;
+  height: 72px;
+}
+
+.resetPwText {
+  font-size: 20px;
+  line-height: 72px;
+  vertical-align: middle;
+  color: #5F7D8B;
+
+}
+
+
+#iconReset {
+  margin-right: 16px;
+  margin-left: 28px;
+}
+
+.pwReset-header #divEneLoginfooter {
+  background-color: red !important;
+}

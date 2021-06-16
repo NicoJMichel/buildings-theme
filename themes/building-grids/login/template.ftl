@@ -83,8 +83,7 @@ $(document).ready(function() {
       <div id="kc-content">
         <div id="divEneLoginContainer">
             <div id="divEneLoginHeader">
-                <#assign logourl = url.resourcesPath + "/img/GRIDS standard Suite.svg">
-                 <img border="0" src="${logourl}" width="180" id="logo">
+            <#nested "header">
             </div>
             <div id="divEneLogin">	
             <#if displayInfo>

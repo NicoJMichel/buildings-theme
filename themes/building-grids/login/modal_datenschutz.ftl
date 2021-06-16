@@ -3,7 +3,7 @@
     <!-- <img id="watermark" src="${url.resourcesPath}/img/datenschutz.svg"/> -->
     <div class="modal-content">
       <div class="modal-header">
-      <img id="watermark" src="${url.resourcesPath}/img/datenschutz.svg"/>
+      <img id="watermark" src="${url.resourcesPath}/img/icon.svg"/>
         <h4 class="modal-title">
           Datenschutzinformationen
         </h4>

@@ -1,7 +1,9 @@
 <#import "template.ftl" as layout>
+<#import "password-resetted.ftl" as pwResetted>
+
 <@layout.registrationLayout displayInfo=true displayMessage=!messagesPerField.existsError('username'); section>
     <#if section = "header">
-        ${msg("emailForgotTitle")}
+        <@pwResetted.passwordResettedHeader />
         <#elseif section = "info" >
         ${msg("emailInstruction")}
     <#elseif section = "form">

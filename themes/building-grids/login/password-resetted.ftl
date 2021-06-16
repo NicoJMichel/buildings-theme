@@ -1,4 +1,13 @@
+<#macro passwordResettedHeader>
+<div class="pwReset-header">
+    <img id="iconReset" src="${url.resourcesPath}/img/icon.svg"/>
+        <span class="resetPwText">
+          ${msg("resetPasswordHeader")}
+        </span>
+</div>
+</#macro>
 <#macro passwordResettedContent>
+
             <div class="${properties.kcFormGroupClass!} ${properties.kcFormSettingClass!}">
                 <div class="resettedInformation">
                 <span>${msg("confirmPwResetMessage")}</span>
