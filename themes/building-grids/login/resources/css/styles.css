@@ -204,8 +204,8 @@ input[type="password"]:focus {
   width: 22px;
   height: 22px;
   position: absolute;
-  top: 0.2em;
-  left: 0.25em;
+  top: 1px;
+  left: 1px;
 }
 
 #divEneRememberMe {
@@ -505,11 +505,10 @@ p {
   display: none;
 }
 
-
 /* Password resetted */
 
 .pwReset-header {
-  background-color: #F2F4F6;
+  background-color: #f2f4f6;
   height: 72px;
 }
 
@@ -517,10 +516,8 @@ p {
   font-size: 20px;
   line-height: 72px;
   vertical-align: middle;
-  color: #5F7D8B;
-
+  color: #5f7d8b;
 }
-
 
 #iconReset {
   margin-right: 16px;
